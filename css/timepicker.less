@@ -39,6 +39,7 @@
     }
 }
 .bootstrap-timepicker-widget {
+    min-width: 11rem;
     &.dropdown-menu {
         padding: 4px;
         &.open {
@@ -97,8 +98,13 @@
             border-top: 6px solid #ffffff;
         }
     }
-    a.btn, input {
-        border-radius: 4px;
+    a.btn {
+        border-color: lightgray;
+    }
+    input {
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        padding: 8px;
     }
 
     table {
@@ -110,6 +116,7 @@
             height: 30px;
             margin: 0;
             padding: 2px;
+            font-weight: bold;
 
             &:not(.separator) {
                 min-width: 30px;
@@ -142,7 +149,7 @@
                 }
             }
             input {
-                width: 25px;
+                width: 36px;
                 margin: 0;
                 text-align: center;
             }
