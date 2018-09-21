@@ -296,7 +296,7 @@
              '<td><a href="#" data-action="incrementSecond"><span class="'+ this.icons.up +'"></span></a></td>'
            : '') +
            (this.showMeridian ?
-             '<td class="separator">&nbsp;</td>'+
+             '<td class="separator"></td>'+
              '<td class="meridian-column"></td>'
            : '') +
          '</tr>'+
@@ -309,7 +309,7 @@
             '<td>'+ secondTemplate +'</td>'
            : '') +
            (this.showMeridian ?
-            '<td class="separator">&nbsp;</td>'+
+            '<td class="separator"></td>'+
             '<td>'+ meridianTemplate +'</td>'
            : '') +
          '</tr>'+
@@ -322,7 +322,7 @@
             '<td><a href="#" data-action="decrementSecond"><span class="'+ this.icons.down +'"></span></a></td>'
            : '') +
            (this.showMeridian ?
-            '<td class="separator">&nbsp;</td>'+
+            '<td class="separator"></td>'+
             '<td></td>'
            : '') +
          '</tr>'+
