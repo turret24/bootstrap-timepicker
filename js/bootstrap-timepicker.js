@@ -277,7 +277,8 @@
         hourTemplate = '<input type="text" class="bootstrap-timepicker-hour" maxlength="2"/>';
         minuteTemplate = '<input type="text" class="bootstrap-timepicker-minute" maxlength="2"/>';
         secondTemplate = '<input type="text" class="bootstrap-timepicker-second" maxlength="2"/>';
-        meridianTemplate = '<input type="text" class="bootstrap-timepicker-meridian" maxlength="2"/>';
+        meridianTemplate = '<a href="#" class="bootstrap-timepicker-meridian btn btn-light" data-action="toggleMeridian"></a>' +
+          '<input type="hidden" class="bootstrap-timepicker-meridian" maxlength="2"/>';
       } else {
         hourTemplate = '<span class="bootstrap-timepicker-hour"></span>';
         minuteTemplate = '<span class="bootstrap-timepicker-minute"></span>';
@@ -296,7 +297,7 @@
            : '') +
            (this.showMeridian ?
              '<td class="separator">&nbsp;</td>'+
-             '<td class="meridian-column"><a href="#" data-action="toggleMeridian"><span class="'+ this.icons.up +'"></span></a></td>'
+             '<td class="meridian-column"></td>'
            : '') +
          '</tr>'+
          '<tr>'+
@@ -322,7 +323,7 @@
            : '') +
            (this.showMeridian ?
             '<td class="separator">&nbsp;</td>'+
-            '<td><a href="#" data-action="toggleMeridian"><span class="'+ this.icons.down +'"></span></a></td>'
+            '<td></td>'
            : '') +
          '</tr>'+
        '</table>';
@@ -1005,6 +1006,7 @@
         }
         if (this.showMeridian) {
           this.$widget.find('input.bootstrap-timepicker-meridian').val(this.meridian);
+          this.$widget.find('a.bootstrap-timepicker-meridian').html(this.meridian);
         }
       } else {
         this.$widget.find('span.bootstrap-timepicker-hour').text(hour);
@@ -1151,8 +1153,8 @@
     appendWidgetTo: 'body',
     showWidgetOnAddonClick: true,
     icons: {
-      up: 'glyphicon glyphicon-chevron-up',
-      down: 'glyphicon glyphicon-chevron-down'
+      up: 'fas fa-angle-up',
+      down: 'fas fa-angle-down'
     },
     maxHours: 24,
     explicitMode: false
